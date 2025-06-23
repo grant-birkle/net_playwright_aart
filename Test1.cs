@@ -5,7 +5,7 @@ using Microsoft.Playwright.MSTest;
 namespace PlaywrightTests;
 
 [TestClass]
-public class ExampleTest : PageTest
+public class ExampleTest : AART_PageTest
 {
     [TestMethod]
     public async Task AART_MainPageTitle()
@@ -27,10 +27,10 @@ public class ExampleTest : PageTest
         // Select the About Us item
         await Page.GetByRole(AriaRole.Link, new() { Name = "About Us" }).ClickAsync();
 
-        // // Verify About page has correct URL:
+        // Verify About page has correct URL:
         await Expect(Page).ToHaveURLAsync("https://www.arrt.org/pages/about/about-us");
 
-        // // verify About Page Title:
+        // verify About Page Title:
         await Expect(Page).ToHaveTitleAsync("Welcome to the American Registry of Radiologic Technologists (ARRT) website - ARRT.org - ARRT");
         var title = await Page.TitleAsync();
         Console.WriteLine("Ttitle: " + title); 
