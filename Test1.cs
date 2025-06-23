@@ -33,6 +33,6 @@ public class ExampleTest : AART_PageTest
         // verify About Page Title:
         await Expect(Page).ToHaveTitleAsync("Welcome to the American Registry of Radiologic Technologists (ARRT) website - ARRT.org - ARRT");
         var title = await Page.TitleAsync();
-        Console.WriteLine("Ttitle: " + title); 
+        Console.WriteLine("Title: " + title); 
     }    
 }
